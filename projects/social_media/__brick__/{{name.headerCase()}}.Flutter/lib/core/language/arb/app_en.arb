@@ -1,0 +1,51 @@
+{
+  "@@locale": "en",
+  "home": "Home",
+  "@home": {
+    "description": "Home screen app bar title"
+  },
+  "profile": "Profile",
+  "@profile": {
+    "description": "Profile screen app bar title"
+  },
+  "upload": "Upload",
+  "@upload": {
+    "description": "Upload screen app bar title"
+  },
+  "welcome": "Welcome",
+  "@welcome": {
+    "description": "Login Screen Heading"
+  },
+  "loginOrRegister": "Login Or Register",
+  "@loginOrRegister": {
+    "description": "Login Screen Heading"
+  },
+  "phoneNumber": "Phone Number",
+  "@phoneNumber": {
+    "description": "Login Screen Heading"
+  },
+  "verification": "Verification",
+  "@verification": {
+    "description": "Otp Screen Heading"
+  },
+  "verifyOtpSubTitle1": "Please enter the 4-digit OTP sent to your",
+  "@verifyOtpSubTitle1": {
+    "description": "Otp Screen subtitle"
+  },
+  "edit": "Edit",
+  "@edit": {
+    "description": ""
+  },
+  "verify": "Verify",
+  "@verify": {
+    "description": ""
+  },
+  "resend": "Resend",
+  "@resend": {
+    "description": ""
+  },
+  "verifyOtpSubTitle2": "Didn’t receive the code? ",
+  "@verifyOtpSubTitle2": {
+    "description": ""
+  }
+}
