@@ -89,11 +89,11 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.fegno" "\0"
+            VALUE "CompanyName", "{{org.dotCase()}}" "\0"
             VALUE "FileDescription", "{{name.snakeCase()}}" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "{{name.snakeCase()}}" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.fegno. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 {{org.dotCase()}}. All rights reserved." "\0"
             VALUE "OriginalFilename", "{{name.snakeCase()}}.exe" "\0"
             VALUE "ProductName", "ba{{name.snakeCase()}}sic" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"

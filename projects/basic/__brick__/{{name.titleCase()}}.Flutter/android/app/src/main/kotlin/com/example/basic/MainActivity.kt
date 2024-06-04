@@ -1,4 +1,4 @@
-package com.example.{{name.titleCase()}}!
+package {{org.dotCase()}}.{{name.snakeCase()}}
 
 import io.flutter.embedding.android.FlutterActivity
 
