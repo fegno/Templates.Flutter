@@ -66,7 +66,7 @@ class DefaultFirebaseOptions {
     projectId: 'push-notification-2f69f',
     storageBucket: 'push-notification-2f69f.appspot.com',
     androidClientId: '113964156128-ohk35u6m38q6ntudbcoe3i2lg2mf801d.apps.googleusercontent.com',
-    iosBundleId: 'com.fegno.basic',
+    iosBundleId: 'com.{{org.snakeCase()}}.{{name.snakeCase()}}',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -76,6 +76,6 @@ class DefaultFirebaseOptions {
     projectId: 'push-notification-2f69f',
     storageBucket: 'push-notification-2f69f.appspot.com',
     androidClientId: '113964156128-ohk35u6m38q6ntudbcoe3i2lg2mf801d.apps.googleusercontent.com',
-    iosBundleId: 'com.fegno.basic.RunnerTests',
+    iosBundleId: 'com.{{org.snakeCase()}}.{{name.snakeCase()}}.RunnerTests',
   );
 }

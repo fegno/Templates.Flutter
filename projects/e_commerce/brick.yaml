@@ -33,6 +33,6 @@ vars:
     prompt: What is project name?
   org:
     type: string
-    description: Organization domain
-    default: com.fegno
-    prompt: What is Organization domain?
+    description: Organization name
+    default: fegno
+    prompt: What is Organization name?
