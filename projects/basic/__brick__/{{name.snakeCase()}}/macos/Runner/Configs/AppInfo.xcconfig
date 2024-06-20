@@ -11,4 +11,4 @@ PRODUCT_NAME = {{name.titleCase()}}
 PRODUCT_BUNDLE_IDENTIFIER = com.{{org.snakeCase()}}.{{name.snakeCase()}}
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2024 com.{{org.snakeCase()}}. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2024 com.fegno. All rights reserved.

@@ -91,7 +91,7 @@ class DrawerView extends StatelessWidget {
             },
           ).align(Alignment.bottomLeft),
           IconButton(
-            onPressed: () => SessionService().clearAll().then((_) => context.pushAndRemoveUntil(const OnBoardingView())),
+            onPressed: context.read<AuthCubit>().logout,
             icon: const Icon(Icons.logout),
           ).align(Alignment.bottomLeft),
           Text(

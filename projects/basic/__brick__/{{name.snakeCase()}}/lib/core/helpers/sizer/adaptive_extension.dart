@@ -18,7 +18,3 @@ extension ResponsiveSizeExt on num {
 
   Widget get horizontalSpaceRadius => Sizer.setHorizontalSpacingRadius(this);
 }
-
-extension EdgeInsetsX on EdgeInsets {
-  EdgeInsets get r => copyWith(top: top.r, left: left.r, right: right.r, bottom: bottom.r);
-}

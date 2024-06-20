@@ -1,4 +1,4 @@
-# {{name.sentenceCase()}}
+# {{name.titleCase()}}
 
 A new Flutter project.
 

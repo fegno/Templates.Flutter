@@ -1,2 +1,2 @@
-export 'cubit/app_cubit.dart';
-export 'view/view.dart';
+export 'logic/logic.dart';
+export 'view/app_view.dart';

@@ -16,27 +16,27 @@ class NotificationServices {
         ),
       ],
     );
-    await _getToken;
-    await iconBadging;
-    FirebaseMessaging.onBackgroundMessage(NotificationServices.handleBackGroundMessage);
-    _handleForeGroundMessage();
+    // await _getToken;
+    // await iconBadging;
+    // FirebaseMessaging.onBackgroundMessage(NotificationServices.handleBackGroundMessage);
+    // _handleForeGroundMessage();
   }
 
-  //* Handle foreground messages from here
-  static void _handleForeGroundMessage() {
-    FirebaseMessaging.onMessage.listen((msg) async {
-      if (msg.notification?.title != null && msg.notification?.body != null) {
-        write('message form firebase [ForeGround] : ${msg.notification?.title}');
-        await createNotification(title: msg.notification?.title ?? '', body: '[foreground] ${msg.notification?.body}');
-      }
-    });
-  }
+  // //* Handle foreground messages from here
+  // static void _handleForeGroundMessage() {
+  //   FirebaseMessaging.onMessage.listen((msg) async {
+  //     if (msg.notification?.title != null && msg.notification?.body != null) {
+  //       write('message form firebase [ForeGround] : ${msg.notification?.title}');
+  //       await createNotification(title: msg.notification?.title ?? '', body: '[foreground] ${msg.notification?.body}');
+  //     }
+  //   });
+  // }
 
-  //* Handle foreground messages from here
-  static Future<void> get _getToken async {
-    final token = await FirebaseMessaging.instance.getToken();
-    write('FCM Token is : $token');
-  }
+  // //* Handle foreground messages from here
+  // static Future<void> get _getToken async {
+  //   final token = await FirebaseMessaging.instance.getToken();
+  //   write('FCM Token is : $token');
+  // }
 
   ///* Checking notification service .
   ///* If notificat is'nt .It will ask permission
@@ -67,12 +67,12 @@ class NotificationServices {
     );
   }
 
-  ///*
-  @pragma('vm:entry-point')
-  static Future<void> handleBackGroundMessage(RemoteMessage msg) async {
-    write('message form firebase [BackGround] : ${msg.notification?.title}');
-    await createNotification(title: msg.notification?.title ?? '', body: '[BackGround] ${msg.notification?.body}');
-  }
+  // ///*
+  // @pragma('vm:entry-point')
+  // static Future<void> handleBackGroundMessage(RemoteMessage msg) async {
+  //   write('message form firebase [BackGround] : ${msg.notification?.title}');
+  //   await createNotification(title: msg.notification?.title ?? '', body: '[BackGround] ${msg.notification?.body}');
+  // }
 
   ///*
   static Future<void> get iconBadging async {

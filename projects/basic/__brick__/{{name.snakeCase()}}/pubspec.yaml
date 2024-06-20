@@ -36,11 +36,13 @@ dependencies:
   package_info_plus: ^5.0.1
 
   #* Linux
-  # dev_preview:
-  #   git: https://github.com/salahu01/dev_preview.git
+  device_preview: ^1.2.0
 
-  #* Local storage
-  shared_preferences: ^2.2.2
+  #* Storage
+  cookie_jar: ^4.0.8
+  dio_cookie_manager: ^3.1.1
+  hydrated_bloc: ^9.1.5
+  path: ^1.9.0
 
   #* Svg support
   flutter_svg: ^2.0.10+1
@@ -62,7 +64,7 @@ dependencies:
   image_picker: ^1.0.7
 
   #* Medias
-  record: ^5.0.4
+  # record: ^5.0.4
 
   #* Managing Directories
   path_provider: ^2.1.2
@@ -74,11 +76,11 @@ dependencies:
   # awesome_notifications_fcm: ^0.9.2
 
   #*Firebase
-  firebase_core: ^3.1.0
+  # firebase_core: ^3.1.0
   # firebase_crashlytics: ^3.4.19
-  firebase_messaging: ^15.0.1
-  firebase_crashlytics: ^4.0.1
-  firebase_analytics: ^11.0.1
+  # firebase_messaging: ^15.0.1
+  # firebase_crashlytics: ^4.0.1
+  # firebase_analytics: ^11.0.1
 
   #*Permissions
   permission_handler: ^11.3.0
@@ -92,8 +94,8 @@ dependencies:
   #* App Updating [ Version Management ]
   in_app_update: ^4.2.2
 
-  #
-  path: ^1.9.0
+  #* Functional Programing
+  fpdart: ^1.1.0
 
 dependency_overrides:
   web: any

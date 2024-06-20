@@ -1,47 +1,47 @@
-import 'dart:io';
-import 'dart:typed_data';
+// import 'dart:io';
+// import 'dart:typed_data';
 
-import 'package:path/path.dart' as p;
-import 'package:path_provider/path_provider.dart';
-import 'package:record/record.dart';
+// import 'package:path/path.dart' as p;
+// import 'package:path_provider/path_provider.dart';
+// import 'package:record/record.dart';
 
-mixin AudioRecorderMixin {
-  Future<void> recordFile(AudioRecorder recorder, RecordConfig config) async {
-    final path = await _getPath();
+// mixin AudioRecorderMixin {
+//   Future<void> recordFile(AudioRecorder recorder, RecordConfig config) async {
+//     final path = await _getPath();
 
-    await recorder.start(config, path: path);
-  }
+//     await recorder.start(config, path: path);
+//   }
 
-  Future<void> recordStream(AudioRecorder recorder, RecordConfig config) async {
-    final path = await _getPath();
+//   Future<void> recordStream(AudioRecorder recorder, RecordConfig config) async {
+//     final path = await _getPath();
     
-    final file = File(path);
+//     final file = File(path);
 
-    final stream = await recorder.startStream(config);
+//     final stream = await recorder.startStream(config);
 
-    stream.listen(
-      (data) {
-        // ignore: avoid_print
-        print(
-          recorder.convertBytesToInt16(Uint8List.fromList(data)),
-        );
-        file.writeAsBytesSync(data, mode: FileMode.append);
-      },
-      // ignore: avoid_print
-      onDone: () {
-        // ignore: avoid_print
-        print('End of stream. File written to $path.');
-      },
-    );
-  }
+//     stream.listen(
+//       (data) {
+//         // ignore: avoid_print
+//         print(
+//           recorder.convertBytesToInt16(Uint8List.fromList(data)),
+//         );
+//         file.writeAsBytesSync(data, mode: FileMode.append);
+//       },
+//       // ignore: avoid_print
+//       onDone: () {
+//         // ignore: avoid_print
+//         print('End of stream. File written to $path.');
+//       },
+//     );
+//   }
 
-  void downloadWebData(String path) {}
+//   void downloadWebData(String path) {}
 
-  Future<String> _getPath() async {
-    final dir = await getApplicationDocumentsDirectory();
-    return p.join(
-      dir.path,
-      'audio_${DateTime.now().millisecondsSinceEpoch}.m4a',
-    );
-  }
-}
+//   Future<String> _getPath() async {
+//     final dir = await getApplicationDocumentsDirectory();
+//     return p.join(
+//       dir.path,
+//       'audio_${DateTime.now().millisecondsSinceEpoch}.m4a',
+//     );
+//   }
+// }

@@ -12,23 +12,18 @@ final class HomeRepo {
   static HomeRepo? _authRepo;
 
   ///* A simple methord for user login
-  Future<HomeEntity> fetchHome() async {
+  Future<Either<ApiException, HomeEntity>> fetchHome() async {
     try {
       write(ApiUris.home);
       return await BaseRepository().apiCall(
         call: Dio().get<dynamic>(
           ApiUris.home,
-          options: Options(
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': SessionService().token,
-            },
-          ),
+          options: Options(),
         ),
-        onSuccess: (res) => HomeEntity.fromJson(res.data),
+        onSuccess: (res) => right(HomeEntity.fromJson(res.data)),
       );
-    } catch (e) {
-      throw Exception('$e');
+    } on ApiException catch (e) {
+      return left(e);
     }
   }
 }

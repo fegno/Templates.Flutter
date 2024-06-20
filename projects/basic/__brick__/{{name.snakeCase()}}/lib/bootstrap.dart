@@ -7,15 +7,15 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   //* ⚙️ widget binding
   WidgetsFlutterBinding.ensureInitialized();
 
-  //*for log flutter global error 🐞
-  FlutterError.onError = (details) {
-    FirebaseCrashlytics.instance.recordFlutterFatalError(details);
-    write(details.exceptionAsString(), stackTrace: details.stack);
-  };
-  PlatformDispatcher.instance.onError = (error, stack) {
-    FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
-    return true;
-  };
+  // //*for log flutter global error 🐞
+  // FlutterError.onError = (details) {
+  //   FirebaseCrashlytics.instance.recordFlutterFatalError(details);
+  //   write(details.exceptionAsString(), stackTrace: details.stack);
+  // };
+  // PlatformDispatcher.instance.onError = (error, stack) {
+  //   FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+  //   return true;
+  // };
 
   //* firebase configuration
   // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
@@ -27,7 +27,9 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   Bloc.observer = const AppBlocObserver();
 
   //* 🍪📦  session configuration
-  await SessionService().init();
+  HydratedBloc.storage = await HydratedStorage.build(
+    storageDirectory: kIsWeb ? HydratedStorage.webStorageDirectory : await getApplicationDocumentsDirectory(),
+  );
 
   //* 🏃 for integrate initial widget
   runApp(

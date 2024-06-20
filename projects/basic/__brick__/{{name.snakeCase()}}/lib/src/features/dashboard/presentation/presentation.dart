@@ -1,2 +1,2 @@
 export 'components/components.dart';
-export 'view/view.dart';
+export 'screen/view.dart';
